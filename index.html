@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <script async src="script.js"></script>
+    <title>Country Explorer</title>
+  </head>
+  <body>
+
+    <nav class="nav flex items-center justify-between bg-emerald-500">
+        <div class="flex items-center space-x-4">
+                <img class="btn-logo h-14 cursor-pointer" src="logo.png" alt="Main Logo" title="Home">
+            <div class="div-dark-mode cursor-pointer flex items-center rounded-full gap-2 w-40 bg-white">
+                <img class="btn-dark-mode h-12 cursor-pointer" src="dark-mode-logo.png" alt="Dark Mode Button">
+                <div class="pb-1 text-dark-mode">Light Mode</div>
+            </div>
+        </div>
+        <div class="nav flex px-3">
+            <div class="nav-item ml-auto px-4 py-1.5 cursor-pointer text-white">India</div>
+            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">Russia</div>
+            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">China</div>
+            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">United States</div>
+        </div>
+    </nav>
+
+        <div class="total-main grid justify-center items-center">
+            <div class="text-center mb-20"> 
+                <h1 class="heading text-middle text-emerald-500 text-5xl font-medium"></h1>
+                <div class="box-border flex my-10 border-2 border-emerald-200 p-5 rounded-md">
+                    <h1 class="box-text text-emerald-500 mt-1 text-2xl font-semibold mr-6">Enter Any Country</h1> 
+                    <input class="val-input border-emerald-400 rounded-full p-5 pb-6 h-10 focus:border-emerald-600 outline-none border-2" type="text" placeholder="Country..." spellcheck="false"> 
+                </div>
+                <div>
+                    <button class="btn-reset mr-10 bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 hover:text-white text-lg" type="reset">Reset</button> 
+                    <button class="btn-submit bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 hover:text-white text-lg" type="button">Submit</button> 
+                </div>
+                <div>
+                    <h1 class="error hidden mt-5 text-red-500">No Such Countries Found! Please Enter a Valid Country.</h1>
+                </div>
+            </div>
+        </div>
+
+    <div class="hidden total-boxes justify-center items-center">
+        <div class="flex flex-col text-center"> <!--For the boxes and button-->
+            <div class="parent flex gap-x-20"><!--For the boxes-->
+                <!-- <div class="box box-neigh bg-white text-black shadow-xl rounded-lg">
+                    <img class="block image-neigh rounded-lg" alt="Neighbour Flag" src="">
+                    <div class="text-center">
+                        <div class="div-11 flex">
+                            <h1>Country Name</h1>
+                            <h1 class="text-center name-neigh"></h1>
+                        </div>
+                        <div class="div-12 flex">
+                            <h1>Capital Name</h1>
+                            <h1 class="text-center capital-neigh"></h1>
+                        </div>
+                        <div class="div-13 flex">
+                            <h1>Population</h1>
+                            <h1 class="text-center population-neigh"></h1>
+                        </div>
+                        <div class="div-14 flex">
+                            <h1>Continents</h1>
+                            <h1 class="text-center continents-neigh"></h1> 
+                        </div>
+                        <div class="div-15 flex">
+                            <h1>Currency</h1>
+                            <h1 class="text-center currency-neigh"></h1> 
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="box box-main bg-white text-black shadow-xl rounded-lg">
+                    <img class="block image-main rounded-lg" alt="Country Flag" src="">
+                    <div class="flex flex-col justify-center">
+                        <div class="div-21 flex mx-auto">
+                            <h1>Country Name--</h1>
+                            <h1 class="text-center name-main"></h1>
+                        </div>
+                        <div class="div-22 flex mx-auto">
+                            <h1>Capital Name--</h1>
+                            <h1 class="text-center capital-main"></h1>
+                        </div>
+                        <div class="div-23 flex mx-auto">
+                            <h1>Population--</h1>
+                            <h1 class="text-center population-main"></h1>
+                        </div>
+                        <div class="div-24 flex mx-auto">
+                            <h1>Continents--</h1>
+                            <h1 class="text-center continents-main"></h1> 
+                        </div>
+                        <div class="div-25 flex mx-auto">
+                            <h1>Currency--</h1>
+                            <h1 class="text-center currency-main"></h1> 
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="box box-neigh bg-white text-black shadow-xl rounded-lg">
+                    <img class="block image-neigh rounded-lg" alt="Neighbour Flag" src="">
+                    <div class="text-center">
+                        <div class="div-31 flex">
+                            <h1>Country Name</h1>
+                            <h1 class="text-center name-neigh"></h1>
+                        </div>
+                        <div class="div-32 flex">
+                            <h1>Capital Name</h1>
+                            <h1 class="text-center capital-neigh"></h1>
+                        </div>
+                        <div class="div-33 flex">
+                            <h1>Population</h1>
+                            <h1 class="text-center population-neigh"></h1>
+                        </div>
+                        <div class="div-34 flex">
+                            <h1>Continents</h1>
+                            <h1 class="text-center continents-neigh"></h1> 
+                        </div>
+                        <div class="div-35 flex">
+                            <h1>Currency</h1>
+                            <h1 class="text-center currency-neigh"></h1> 
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div>
+                <button class="btn-close mt-20 bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 text-lg" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

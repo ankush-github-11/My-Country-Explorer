@@ -1,0 +1,80 @@
+*{
+    box-sizing:border-box;
+}
+.total-main , .total-boxes{
+    height: 91vh;
+}
+.box{
+    height: 460px;
+    width: 275px;
+    padding: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.box img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.box div{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.shadow-2xl-top {
+    --tw-shadow: 0 -15px 50px -12px rgb(0 0 0 / 0.25), 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 -15px 50px -12px var(--tw-shadow-color), 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.image{
+    height: 200px;
+    width: 275px;
+}
+.val-input::placeholder{
+    color: #1cc08c;
+}
+.box-main{
+    background-color: #059669;
+}
+.box-neigh{
+    background-color: #059669;
+}
+.nav-item{
+    border-radius: 5px;
+}
+.nav-item:hover{
+    outline: 3px solid#2ed7a1;
+}
+.bg-change{
+    background-color:#01160fec;
+}
+.text-change{
+    color:#ffffff;
+}
+.border-change{
+    border: 2px solid white;
+}
+.bg-change-navbar{
+        background-color: white;
+}
+.text-change-nav-item{
+    color: black;
+}
+.bg-change-input{
+    background-color: #01160fec;
+}
+.bg-change-btn{
+    background-color: rgb(255, 255, 255);
+}
+.text-change-btn{
+    color: black;
+}
+.box{
+    outline: 1px solid rgba(255, 255, 255, 0.752);
+}
+.neigh-box-color-change{
+    background-color:#01160fec;
+}
+.neigh-text-color-change{
+    color: white;
+}
