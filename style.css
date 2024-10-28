@@ -1,6 +1,9 @@
 *{
     box-sizing:border-box;
 }
+.my-fa-color-change{
+    color: rgb(255, 255, 255);
+}
 .total-main , .total-boxes{
     height: 91vh;
 }
@@ -21,6 +24,21 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.box-border{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.box-border > h1{
+    text-align: center;
+}
+.middle-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
 .shadow-2xl-top {
     --tw-shadow: 0 -15px 50px -12px rgb(0 0 0 / 0.25), 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --tw-shadow-colored: 0 -15px 50px -12px var(--tw-shadow-color), 0 25px 50px -12px var(--tw-shadow-color);
@@ -39,11 +57,35 @@
 .box-neigh{
     background-color: #059669;
 }
+.parent{
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
 .nav-item{
+    padding: 0.5vw 1.2vw;
+    margin: 0px 0.5vw;
     border-radius: 5px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+.div-dark-mode{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-item:hover{
     outline: 3px solid#2ed7a1;
+}
+.btn-logo{
+    border-radius: 100%;
+}
+.btn-close{
+    width: 128px;
 }
 .bg-change{
     background-color:#01160fec;
@@ -55,7 +97,7 @@
     border: 2px solid white;
 }
 .bg-change-navbar{
-        background-color: white;
+        background-color: rgb(255, 255, 255);
 }
 .text-change-nav-item{
     color: black;
@@ -78,3 +120,32 @@
 .neigh-text-color-change{
     color: white;
 }
+.button-div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.bg-white-green{
+    background-color: #10B981;
+}
+.bg-black-white{
+    background-color: white;
+}
+@media only screen and (max-width: 709px){
+    .btn-close{
+        width: 275px;
+    }
+    .box-main{
+        order: -1;
+    }
+}
+@media only screen and (max-width: 504px){
+    .box-border{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .nav-item{
+        font-size: 12px;
+    }
+}
+/* Twice Wrong Input Error */

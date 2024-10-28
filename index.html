@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script async src="script.js"></script>
     <title>Country Explorer</title>
   </head>
@@ -13,30 +14,30 @@
 
     <nav class="nav flex items-center justify-between bg-emerald-500">
         <div class="flex items-center space-x-4">
-                <img class="btn-logo h-14 cursor-pointer" src="logo.png" alt="Main Logo" title="Home">
-            <div class="div-dark-mode cursor-pointer flex items-center rounded-full gap-2 w-40 bg-white">
-                <img class="btn-dark-mode h-12 cursor-pointer" src="dark-mode-logo.png" alt="Dark Mode Button">
-                <div class="pb-1 text-dark-mode">Light Mode</div>
+            <img class="btn-logo h-14 cursor-pointer" src="logo.png" alt="Main Logo" title="Home">
+            <div class="div-dark-mode cursor-pointer rounded-full bg-white-green">
+                <img class="mt-1" src="dark-mode-logo.png" alt="Dark Mode Logo" height="45px" width="45px">
+                <div class=" text-dark-mode px-2 hidden">Light Mode</div>
             </div>
         </div>
-        <div class="nav flex px-3">
-            <div class="nav-item ml-auto px-4 py-1.5 cursor-pointer text-white">India</div>
-            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">Russia</div>
-            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">China</div>
-            <div class="nav-item px-4 py-1.5 cursor-pointer text-white">United States</div>
+        <div class="nav flex">
+            <div class="nav-item ml-auto cursor-pointer text-white">India</div>
+            <div class="nav-item cursor-pointer text-white">Russia</div>
+            <div class="nav-item cursor-pointer text-white">China</div>
+            <div class="nav-item cursor-pointer text-white">United States</div>
         </div>
     </nav>
 
         <div class="total-main grid justify-center items-center">
-            <div class="text-center mb-20"> 
-                <h1 class="heading text-middle text-emerald-500 text-5xl font-medium"></h1>
-                <div class="box-border flex my-10 border-2 border-emerald-200 p-5 rounded-md">
-                    <h1 class="box-text text-emerald-500 mt-1 text-2xl font-semibold mr-6">Enter Any Country</h1> 
-                    <input class="val-input border-emerald-400 rounded-full p-5 pb-6 h-10 focus:border-emerald-600 outline-none border-2" type="text" placeholder="Country..." spellcheck="false"> 
+            <div class="text-center middle-box px-2 mb-20"> 
+                <h1 class="heading text-middle text-emerald-500 text-5xl px-2 font-medium"></h1>
+                <div class="box-border flex my-10 p-4 border-2 border-emerald-200 rounded-md">
+                    <h1 class="box-text text-emerald-500 mb-2 text-2xl font-semibold">Enter Any Country</h1> 
+                    <input class="val-input border-emerald-400 rounded-full p-5 h-10 focus:border-emerald-600 outline-none border-2" type="text" placeholder="Country..." spellcheck="false"> 
                 </div>
-                <div>
-                    <button class="btn-reset mr-10 bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 hover:text-white text-lg" type="reset">Reset</button> 
-                    <button class="btn-submit bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 hover:text-white text-lg" type="button">Submit</button> 
+                <div class="button-div">
+                    <button class="btn-reset bg-emerald-500 font-semibold text-white h-10 w-32 rounded-lg hover:bg-emerald-600 hover:text-white text-lg" type="reset">Reset</button> 
+                    <button class="btn-submit bg-emerald-500 font-semibold text-white h-10 w-32 rounded-lg hover:bg-emerald-600 hover:text-white text-lg" type="button">Submit</button> 
                 </div>
                 <div>
                     <h1 class="error hidden mt-5 text-red-500">No Such Countries Found! Please Enter a Valid Country.</h1>
@@ -124,8 +125,8 @@
                     </div>
                 </div> -->
             </div>
-            <div>
-                <button class="btn-close mt-20 bg-emerald-500 font-semibold text-white h-10 w-32 rounded-full hover:bg-emerald-600 text-lg" type="button">Close</button>
+            <div class="flex justify-center items-center">
+                <button class="btn-close bg-emerald-500 mb-5 font-semibold text-white h-10 rounded-lg hover:bg-emerald-600 text-lg" type="button">Close</button>
             </div>
         </div>
     </div>

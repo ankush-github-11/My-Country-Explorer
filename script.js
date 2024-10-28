@@ -209,11 +209,11 @@ const toggleDarkAndLightModeForMain = function(){                               
   document.querySelector("body").classList.toggle("bg-change");
   document.querySelector(".text-dark-mode").classList.toggle("text-change");
   document.querySelector(".div-dark-mode").classList.toggle("flex-row-reverse");
-  document.querySelector(".div-dark-mode").classList.toggle("bg-white");
-  document.querySelector(".div-dark-mode").classList.toggle("bg-black");
-  if(document.querySelector(".div-dark-mode").classList.contains("bg-black"))
+  document.querySelector(".div-dark-mode").classList.toggle("bg-white-green");
+  document.querySelector(".div-dark-mode").classList.toggle("bg-black-white");
+  if(document.querySelector(".div-dark-mode").classList.contains("bg-black-white"))
     document.querySelector(".text-dark-mode").textContent = "Dark Mode";
-  if(document.querySelector(".div-dark-mode").classList.contains("bg-white"))
+  if(document.querySelector(".div-dark-mode").classList.contains("bg-white-green"))
     document.querySelector(".text-dark-mode").textContent = "Light Mode";
 
     //Navbar
@@ -292,7 +292,7 @@ document.querySelector(".btn-submit").addEventListener("click", function () {
   // Submit Button Event
   let inputCountry = document.querySelector(".val-input").value;
   if(!isCountryValid(inputCountry)){
-    document.querySelector(".error").classList.toggle("hidden");
+    document.querySelector(".error").classList.remove("hidden");
     return;
   }
   if(!document.querySelector(".error").classList.contains("hidden")){
@@ -316,11 +316,11 @@ document.addEventListener("keydown", function (e) {
   let inputCountry = document.querySelector(".val-input").value;
   if (e.key == "Enter" && !document.querySelector(".total-main").classList.contains("hidden") && inputCountry!='') {
       if(!isCountryValid(inputCountry)){
-        document.querySelector(".error").classList.toggle("hidden");
+        document.querySelector(".error").classList.remove("hidden");
         return;
       }
       if(!document.querySelector(".error").classList.contains("hidden")){
-        document.querySelector(".error").classList.add("hidden")
+        document.querySelector(".error").classList.add("hidden");
       }
       getMainInfo(inputCountry);
       renderMainDiv();
@@ -357,6 +357,7 @@ navItems.forEach((item) => {
 
 document.querySelector(".div-dark-mode").addEventListener("click", function(){ // Dark Mode and Light Mode Toggle Button Event
   toggleDarkAndLightModeForMain();
-  if(document.querySelector(".box-main")!=undefined)toggleDarkAndLightModeForBoxes();
+  if(document.querySelector(".box-main") != undefined)
+    toggleDarkAndLightModeForBoxes();
   setPreviousModeInfo();
 });
