@@ -291,14 +291,15 @@ textMiddle(); // Initial Text Animation Function call
 document.querySelector(".btn-submit").addEventListener("click", function () {
   // Submit Button Event
   let inputCountry = document.querySelector(".val-input").value;
-  if(!isCountryValid(inputCountry)){
+  let trimmedInput = inputCountry.trim();
+  if(!isCountryValid(trimmedInput)){
     document.querySelector(".error").classList.remove("hidden");
     return;
   }
   if(!document.querySelector(".error").classList.contains("hidden")){
     document.querySelector(".error").classList.add("hidden")
   }
-  getMainInfo(inputCountry);
+  getMainInfo(trimmedInput);
   renderMainDiv();
   resultDisplay();
 });
@@ -314,15 +315,16 @@ document.querySelector(".btn-reset").addEventListener("click", function () {
 document.addEventListener("keydown", function (e) {
   // Enter Button Event
   let inputCountry = document.querySelector(".val-input").value;
+  let trimmedInput = inputCountry.trim();
   if (e.key == "Enter" && !document.querySelector(".total-main").classList.contains("hidden") && inputCountry!='') {
-      if(!isCountryValid(inputCountry)){
+      if(!isCountryValid(trimmedInput)){
         document.querySelector(".error").classList.remove("hidden");
         return;
       }
       if(!document.querySelector(".error").classList.contains("hidden")){
         document.querySelector(".error").classList.add("hidden");
       }
-      getMainInfo(inputCountry);
+      getMainInfo(trimmedInput);
       renderMainDiv();
       resultDisplay();
   }
